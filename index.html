@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PocketSmart AI</title><link rel="stylesheet" href="/static/style.css"></head>
+<body>
+<header><h1>💰 PocketSmart AI</h1><p>Smart Budget & Recommendation Assistant</p></header>
+<main><section class="hero"><h2>Plan smarter. Stay within your budget.</h2><p>Choose a planner and get personalized recommendations.</p></section>
+<div class="grid">
+<div class="card"><h2>🏠 Home Interior</h2><p>Plan room items within your budget.</p>
+<form action="/generate-home" method="post">
+<input name="budget" type="number" placeholder="Budget ₹" required>
+<input name="room" placeholder="Room e.g. Bedroom" required>
+<select name="style"><option>Modern</option><option>Minimal</option><option>Traditional</option><option>Simple</option></select>
+<input name="items" placeholder="Items e.g. light, fan, table"><button>Get Recommendations</button></form></div>
+<div class="card"><h2>🎉 Party Planner</h2><p>Plan food, venue and decoration.</p>
+<form action="/generate-party" method="post">
+<input name="budget" type="number" placeholder="Budget ₹" required>
+<input name="guests" type="number" placeholder="Number of guests" required>
+<input name="event" placeholder="Event type e.g. Birthday" required>
+<input name="venue" placeholder="Venue preference"><button>Plan My Party</button></form></div>
+<div class="card"><h2>💎 Jewelry Planner</h2><p>Find occasion and style matched jewelry.</p>
+<form action="/generate-jewelry" method="post" enctype="multipart/form-data">
+<input name="budget" type="number" placeholder="Budget ₹" required>
+<input name="occasion" placeholder="Occasion e.g. Wedding" required>
+<select name="style"><option>Elegant</option><option>Traditional</option><option>Modern</option><option>Simple</option></select>
+<input name="image" type="file" accept="image/*"><button>Find Jewelry</button></form></div>
+</div></main></body></html>
